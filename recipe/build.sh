@@ -1,5 +1,6 @@
-export CFLAGS="-Wall -g -m64 -pipe -O2  -fPIC ${CFLAGS}"
-export CXXLAGS="${CFLAGS} ${CXXLAGS}"
+source activate "${CONDA_DEFAULT_ENV}"
+export CFLAGS="-Wall -m64 -pipe -O2  -fPIC ${CFLAGS}"
+export CXXFLAGS="${CFLAGS} ${CXXFLAGS}"
 export CPPFLAGS="-I${PREFIX}/include ${CPPFLAGS}"
 export LDFLAGS="-L${PREFIX}/lib ${LDFLAGS}"
 export LFLAGS="-fPIC ${LFLAGS}"
