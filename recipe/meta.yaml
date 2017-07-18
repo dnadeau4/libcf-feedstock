@@ -6,28 +6,29 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}-beta11.tar.gz
-  url: http://uvcdat.llnl.gov/cdat/resources/{{ name }}-{{ version }}-beta11.tar.gz
-  sha256: e40d3826ca2b47538b075f69f716798e255fe396fd3ae68e8b051be57a951bb4
+    #fn: {{ name }}-{{ version }}-beta11.tar.gz
+  url: http://uvcdat.llnl.gov/cdat/resources/{{ name }}-{{ version }}-beta12.tar.gz
+  sha256: de3f16c515198eba596f5e52fc69ce7fd18230c043711ff4c1934d76dbbc8259
 
 build:
-  number: 0
-  skip: True  # [win or py3k] 
+  number: 1
+  skip: True  # [win]
 
 requirements:
   build:
-    - toolchain  # [osx]
+    - toolchain
     - python
-    - hdf5 1.8.17|1.8.17.*
+    - hdf5 1.8.*
     - libnetcdf 4.4.*
     - lapack >=3.4.2
     - clapack >=3.2.1
     - curl
     - ossuuid
     - gcc
+
   run:
     - python
-    - hdf5 1.8.17|1.8.17.*
+    - hdf5 1.8.*
     - libnetcdf  4.4.*
     - lapack >=3.4.2
     - clapack >=3.2.1
@@ -38,6 +39,7 @@ requirements:
 test:
   imports:
     - pycf
+    - pycf.libCFConfig
 
 about:
   home: http://www.unidata.ucar.edu/software/libcf/
@@ -45,10 +47,10 @@ about:
   license_file: 'COPYRIGHT'
   summary: 'LibCF library access data files in accordance with the CF Conventions.'
   description: |
-    By using libcf, a data producer can produce files that conform to the CF 
-    standards, without having to write netCDF code to create and decode all 
-    the attributes that the CF convention uses to store meta-data. A data consumer 
-    can use libcf to read any file which conforms to the CF conventions; the 
+    By using libcf, a data producer can produce files that conform to the CF
+    standards, without having to write netCDF code to create and decode all
+    the attributes that the CF convention uses to store meta-data. A data consumer
+    can use libcf to read any file which conforms to the CF conventions; the
     file does not need to be created with libcf to be read by libcf
   dev_url: https://sourceforge.net/projects/libcf/
 
