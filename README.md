@@ -19,8 +19,8 @@ file does not need to be created with libcf to be read by libcf
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libcf-feedstock-dnadeau4-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libcf-feedstock-dnadeau4-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/libcf-feedstock-dnadeau4-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libcf-feedstock-dnadeau4-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libcf-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libcf-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/libcf-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libcf-feedstock)
 ![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
