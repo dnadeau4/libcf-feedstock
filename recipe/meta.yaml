@@ -16,24 +16,22 @@ build:
 
 requirements:
   build:
-    - toolchain  # [osx]
+    - {{ compiler('c') }}
+    - {{ compiler('fortran') }}
+  host:
     - python
-    - hdf5 1.8.17|1.8.17.*
-    - libnetcdf 4.4.*
+    - libnetcdf
     - lapack >=3.4.2
     - clapack >=3.2.1
     - curl
     - ossuuid
-    - gcc
   run:
     - python
-    - hdf5 1.8.17|1.8.17.*
-    - libnetcdf  4.4.*
+    - libnetcdf
     - lapack >=3.4.2
     - clapack >=3.2.1
     - curl
     - ossuuid
-    - libgfortran
 
 test:
   imports:
