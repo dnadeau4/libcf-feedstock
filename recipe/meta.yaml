@@ -1,13 +1,14 @@
 {% set name = "libcf" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
+{% set variant = "openblas" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: http://uvcdat.llnl.gov/cdat/resources/{{ name }}-{{ version }}-beta12.tar.gz
-  sha256: de3f16c515198eba596f5e52fc69ce7fd18230c043711ff4c1934d76dbbc8259
+  url: http://cdat.llnl.gov/cdat/resources/{{ name }}-{{ version }}-beta12.tar.gz
+  sha256: 828f34ebc765177cddf7fee71d13d65f8db114537170d3127d36f02cd8494f74
 
 build:
   number: 5
@@ -20,15 +21,13 @@ requirements:
   host:
     - python
     - libnetcdf
-    - lapack >=3.4.2
-    - clapack >=3.2.1
+    - blas 1.1 {{ variant }}
     - curl >=7.44.0,<8
     - ossuuid
   run:
     - python
     - libnetcdf
-    - lapack >=3.4.2
-    - clapack >=3.2.1
+    - blas 1.1 {{ variant }}
     - curl >=7.44.0,<8
     - ossuuid
 
