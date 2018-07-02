@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: http://cdat.llnl.gov/cdat/resources/{{ name }}-{{ version }}-beta12.tar.gz
+  url: https://github.com/CDAT/libcf/archive/1.0.2.tar.gz
   sha256: 828f34ebc765177cddf7fee71d13d65f8db114537170d3127d36f02cd8494f74
 
 build:
