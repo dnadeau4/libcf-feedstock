@@ -5,7 +5,7 @@ c_compiler:
 fortran_compiler:
 - toolchain_fort
 libnetcdf:
-- '4.5'
+- '4.6'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
